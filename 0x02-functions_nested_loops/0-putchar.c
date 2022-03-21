@@ -1,22 +1,21 @@
-#include "_putchar.c"
+#include"main.h"
 
 /**
- * putchar - writes '_putchar' on stdout
+ * main - Entry point
  *
- * Return: 1 on success.
- */
+ * Description: prints _putchar using putchar prototype
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
-    char str[]="_putchar";
-    char c;
+	char str[] = "_putchar";
+	int ch;
 
-    for (int i = 0; i < 8; i++)
-    {
-        _putchar(str[i]);
-        _putchar('\n');
+	for (ch = 0; ch < 8; ++ch)
+		_putchar(str[ch]);
+	_putchar('\n');
 
-    }
-
-    return (0);
+	return (0);
 }

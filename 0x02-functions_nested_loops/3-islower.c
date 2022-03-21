@@ -1,19 +1,18 @@
-#include <unistd.h>
+#include"main.h"
 
 /**
- * _islower - checks for lowercase character
- * @c: The character to check if islower
+ * _islower - function to check if
+ *           character is lowercase
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _islower(char c)
+ * @c: checks input of function
+ *
+ * Return: returns 1 if `c` is lowercase
+ *         otherwise always 0 (Success)
+*/
+
+int _islower(int c)
 {
-    for (int i = 97; i < 123; i++)
-    {
-        if(c == i)
-            return (1);
-    }
-    
+	if (c >= 97 && c <= 122)
+		return (1);
 	return (0);
 }

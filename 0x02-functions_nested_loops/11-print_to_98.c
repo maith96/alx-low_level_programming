@@ -1,41 +1,23 @@
-#include "_putchar.c"
+#include"main.h"
 
-void print_to_98(int);
 /**
- * print_to_98 - prints to 98 times table
+ * print_to_98 - print n to 98 counts
+ *           separated by comma, followed
+ *           by space and number should be
+ *           printed in order
  *
- * Return: void.
- */
+ * @n: input
+*/
+
 void print_to_98(int n)
 {
-    int i =n;
-if(i > 98){
-            i=-i;
-        }
-    while( i <=98){
-        int m =i;
-        
-        m= ( m<0)?-m:m;
+	int count;
 
-        int dig1= m/10;
-        int dig2 = m % 10;
-
-        if (i != n)
-        {
-        _putchar(',');
-        _putchar(' ');
-
-        }
-        if(i < 0)
-             _putchar('-');
-        if (dig1 != 0)
-        {
-            _putchar(dig1+'0');
-        }
-        _putchar(dig2+'0');
-++i;
-    }
-    _putchar('\n');
-
+	if (n > 98)
+		for (count = n; count > 98; --count)
+			printf("%d, ", count);
+	else
+		for (count = n; count < 98; ++count)
+			printf("%d, ", count);
+	printf("98\n");
 }
-

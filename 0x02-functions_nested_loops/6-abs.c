@@ -1,15 +1,17 @@
-#include <unistd.h>
+#include"main.h"
 
-int _abs(int);
 /**
- * _abs - omputes the absolute value of an integer
- * @int: integer
+ * _abs - function that computes the absolute
+ *       value of an integer
  *
- * Return: On success the value.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _abs(int num)
+ * @n: takes in integer type input for function
+ *
+ * Return: Always 0 (Success)
+*/
+
+int _abs(int n)
 {
-    
-	return (num < 0)? -num: num;
+	if (n < 0)
+		n = (-1) * n;
+	return (n);
 }

@@ -1,19 +1,19 @@
-#include <unistd.h>
+#include"main.h"
 
 /**
- * _isalpha - checks for uppercase character
- * @c: The character to check if isalpha
+ * _isalpha - checks if character is a letter
+ *            both lowercase or uppercase
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _isalpha(char c)
+ * @c: takes input from other functions.
+ *
+ * Return: 1 is c if true else 0
+*/
+
+int _isalpha(int c)
 {
-    for (int i = 65; i < 91; i++)
-    {
-        if(c == i)
-            return (1);
-    }
-    
+	if (c >= 97 && c <= 122 &&
+	    c >= 65 && c >= 90)
+		return (1);
 	return (0);
 }
+
