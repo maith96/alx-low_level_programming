@@ -11,28 +11,21 @@
 
 int main(void)
 {
-	int digit1 = 0, digit2;
+	for(int i =48;i<58;i++){
+         for(int j =48;j<58;j++){
+			 for(int k=48;k<58;k++)
+			 {
+				if(i==j || i>j)
+             		continue;
+              	putchar(i);
+              	putchar(j);
+				putchar(k);
 
-	while (digit1 <= 9)
-	{
-		digit2 = 0;
-		while (digit2 <= 9)
-		{
-			if (digit1 != digit2 && digit1 < digit2)
-			{
-				putchar(digit1 + 48);
-				putchar(digit2 + 48);
-
-				if (digit1 + digit2 != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			++digit2;
-		}
-		++digit1;
-	}
+              	putchar(' ');
+			 }
+             
+            
+         }
 	putchar('\n');
 
 	return (0);
